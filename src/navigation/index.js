@@ -22,7 +22,7 @@ class Navigation extends Component {
             name="FirstPage"
             component={TemplatesComponents.FirstTemplates}
             options={{
-              headerTitle: 'Home Page',
+              headerTitle: 'First Page',
             }}
           />
           <Stack.Screen
@@ -30,6 +30,13 @@ class Navigation extends Component {
             component={TemplatesComponents.SecondTemplates}
             options={{
               headerTitle: 'Second Page',
+            }}
+          />
+          <Stack.Screen
+            name="HistoryPage"
+            component={TemplatesComponents.HistoryTemplates}
+            options={{
+              headerTitle: 'History Page',
             }}
           />
         </Stack.Navigator>

@@ -1,14 +1,18 @@
 import React from 'react';
-import {FlatList, View, Text} from 'react-native';
+import {FlatList, View, Text, TouchableOpacity} from 'react-native';
 import Styles from '../../styles';
 import propTypes from 'prop-types';
 import moleculesComponent from '../molecules';
+import atomsComponent from '../atoms';
+import {useNavigation} from '@react-navigation/native';
 
 const {ListItemMolecules} = moleculesComponent;
 
-const {FirstPageStyle} = Styles.StyleSheets;
+const {ButtonAtoms} = atomsComponent;
 
-export default function HomeOrganism(props) {
+const {FirstPageStyle, ButtonStyle} = Styles.StyleSheets;
+
+export default function HistoryOrganism(props) {
   const RenderElement = () => {
     if (props.data.lenght !== 0) {
       return (
@@ -23,10 +27,22 @@ export default function HomeOrganism(props) {
       );
     }
   };
+
+  const navigation = useNavigation();
+  const onPressed = () => {
+    navigation.navigate('HistoryPage');
+  };
+
   return (
     <View>
       <View style={FirstPageStyle.topFlatlist}>
         <Text style={FirstPageStyle.leftTopFlatlist}>Pair</Text>
+        <TouchableOpacity onPress={() => onPressed()}>
+          <ButtonAtoms
+            text="History"
+            StyleButton={ButtonStyle.wrapperHistory}
+          />
+        </TouchableOpacity>
         <View style={FirstPageStyle.rightTopFlatlist}>
           <Text style={FirstPageStyle.txtRightTopFlatlist}>Last Price</Text>
         </View>
@@ -36,9 +52,9 @@ export default function HomeOrganism(props) {
   );
 }
 
-HomeOrganism.propTypes = {
+HistoryOrganism.propTypes = {
   data: propTypes.any,
 };
-HomeOrganism.defaultProps = {
+HistoryOrganism.defaultProps = {
   data: '',
 };

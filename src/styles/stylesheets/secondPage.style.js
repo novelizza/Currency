@@ -3,11 +3,17 @@ import colors from '../colors';
 
 export default StyleSheet.create({
   wrapper: {
-    backgroundColor: colors.ORANGE_COLOR,
     justifyContent: 'center',
   },
   buysell: {
     flexDirection: 'row',
     justifyContent: 'center',
+  },
+  wrapperTittle: {
+    margin: 10,
+  },
+  crypto: {
+    fontSize: 30,
+    alignSelf: 'center',
   },
 });

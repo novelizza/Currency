@@ -2,11 +2,6 @@ import {StyleSheet} from 'react-native';
 import colors from '../colors';
 
 export default StyleSheet.create({
-  // wrapper: {
-  //   flex: 1,
-  //   backgroundColor: colors.ORANGE_COLOR,
-  //   justifyContent: 'center',
-  // },
   topFlatlist: {
     flexDirection: 'row',
     paddingVertical: 10,
@@ -54,5 +49,9 @@ export default StyleSheet.create({
   },
   txtRightList: {
     fontSize: 17,
+  },
+  buysell: {
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });

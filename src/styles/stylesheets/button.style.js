@@ -16,6 +16,12 @@ export default StyleSheet.create({
     justifyContent: 'center',
     marginHorizontal: 5,
   },
+  wrapperHistory: {
+    width: 100,
+    backgroundColor: colors.ORANGE_COLOR,
+    justifyContent: 'center',
+    marginHorizontal: 5,
+  },
   text: {
     color: colors.WHITE_COLOR,
     alignSelf: 'center',

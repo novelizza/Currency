@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TouchableOpacity, Text} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import propTypes from 'prop-types';
@@ -37,7 +37,7 @@ export default function BuySellOrganism(props) {
         'https://currencytest-63e75-default-rtdb.firebaseio.com/.json',
         dataForApi,
       )
-      .then(result => console.log(result))
+      .then(result => alert('Berhasil!'))
       .catch(err => console.log(err));
   };
 
@@ -48,7 +48,7 @@ export default function BuySellOrganism(props) {
         'https://currencytest-63e75-default-rtdb.firebaseio.com/.json',
         dataForApi,
       )
-      .then(result => console.log(result))
+      .then(result => alert('Berhasil!'))
       .catch(err => console.log(err));
   };
 
